@@ -1,0 +1,22 @@
+{
+  "name": "ci-simon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marbri-18/CI-Simon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marbri-18/CI-Simon/issues"
+  },
+  "homepage": "https://github.com/marbri-18/CI-Simon#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
+}
