@@ -11,12 +11,23 @@ function newGame() {
     game.playerMoves = [];
     game.currentGame = [];
     game.turnNumber = 0;
+    for(let circle of document.getElementsByClassName("circle")) {
+        if(circle.getAttribute("data-listener") !== "true") {
+            circle.addEventListener("click", (e) => {
+                let move = e.target.getAttribute("id");
+                lightsOn(move);
+                game.playerMove.push(move);
+                playerTurn();
+            });
+            circle.setAttribute("data-listener", "true");
+        }
+    }
     showScore();
     addTurn();
 }
 
 function addTurn() {
-    game.playerMoves = [];
+    game.playerMove = [];
     game.currentGame.push(game.choices[(Math.floor(Math.random() * 4))]);
     showTurns();
 }
